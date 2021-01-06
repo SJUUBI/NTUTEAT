@@ -5,19 +5,29 @@ import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 public class apimap extends AppCompatActivity implements OnMapReadyCallback {
     private final static int REQUEST_PERMISSIONS =1;
@@ -44,7 +54,34 @@ public class apimap extends AppCompatActivity implements OnMapReadyCallback {
 
         TextView delivery = (TextView) findViewById(R.id.textView3);                                  //北科美食通標題
         delivery.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
+        //------------------------------------------------------------------------------------------
+        GifImageView ImageView1 = findViewById(R.id.deliveryman);
+        try{
+            GifDrawable gifDrawable1 = new GifDrawable(getResources(), R.drawable.giphy2);
+            ImageView1.setImageDrawable(gifDrawable1);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        //------------------------------------------------------------------------------------------
+        GifImageView ImageView2 = findViewById(R.id.loading);
+        try{
+            GifDrawable gifDrawable2 = new GifDrawable(getResources(), R.drawable.giphy3);
+            ImageView2.setImageDrawable(gifDrawable2);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        //------------------------------------------------------------------------------------------
+        AnimationSet animationSet6 = new AnimationSet(true);
+        TranslateAnimation translateAnimation6 = new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF,2.5f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f);
 
+        translateAnimation6.setDuration(10000);                                                      //動畫持續時間
+        animationSet6.addAnimation(translateAnimation6);
+        ImageView1.startAnimation(animationSet6);
+        //------------------------------------------------------------------------------------------
         if (ActivityCompat.checkSelfPermission(this,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION)!=PackageManager.PERMISSION_GRANTED)
             ActivityCompat.requestPermissions(this,new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_PERMISSIONS);
@@ -65,28 +102,34 @@ public class apimap extends AppCompatActivity implements OnMapReadyCallback {
                         PackageManager.PERMISSION_GRANTED)
             return;
         map.setMyLocationEnabled(true);
+
         MarkerOptions m1 = new MarkerOptions();
-        m1.position(new LatLng(25.033611,121.565000));
-        m1.title("臺北101");
+        m1.position(new LatLng(25.042411883591793, 121.53459043990914));
+        m1.title("您的位置");
         m1.draggable(true);
         map.addMarker(m1);
 
         MarkerOptions m2 = new MarkerOptions();
-        m2.position(new LatLng(25.047924,121.517081));
-        m2.title("臺北車站");
+        m2.position(new LatLng(25.044055385374527, 121.53322700408793));
+        m2.title("店家位置");
         m2.draggable(true);
         map.addMarker(m2);
 
         PolylineOptions polylineOpt = new PolylineOptions();
-        polylineOpt.add(new LatLng(25.033611,121.565000));
-        polylineOpt.add(new LatLng(25.032728,121.565137));
-        polylineOpt.add(new LatLng(25.047924,121.517081));
+        polylineOpt.add(new LatLng(25.044055385374527, 121.53322700408793));
+            polylineOpt.add(new LatLng(25.04401893486118, 121.5336025133535));
+            polylineOpt.add(new LatLng(25.04361797837276, 121.53369370844848));
+            polylineOpt.add(new LatLng(25.043168419541246, 121.53369639065428));
+            polylineOpt.add(new LatLng(25.043158699332334, 121.5339109673665));
+            polylineOpt.add(new LatLng(25.042699418583798, 121.53390292073979));
+            polylineOpt.add(new LatLng(25.042643527158376, 121.53446618460941));
+        polylineOpt.add(new LatLng(25.042411883591793, 121.53459043990914));
         polylineOpt.color(Color.GREEN);
         Polyline polyline = map.addPolyline(polylineOpt);
         polyline.setWidth(10);
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                new LatLng(25.034,121.545),13));
+                new LatLng(25.043306932446388, 121.53383854772765),18));
 
     }
 }

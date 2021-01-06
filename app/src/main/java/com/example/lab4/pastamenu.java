@@ -1,143 +1,115 @@
 package com.example.lab4;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class pastamenu extends AppCompatActivity {
+    private Button pasta_send;
+    Button btn_up[] = new Button[5];
+    Button btn_down[] = new Button[5];
+    TextView num[] = new TextView[5];
+    int up[] = {R.id.btn_up1, R.id.btn_up2, R.id.btn_up3, R.id.btn_up4, R.id.btn_up5};
+    int down[] = {R.id.btn_down1, R.id.btn_down2, R.id.btn_down3, R.id.btn_down4, R.id.btn_down5};
+    int number[] = {R.id.num1, R.id.num2, R.id.num3, R.id.num4, R.id.num5};
+    int e[] = {0, 0, 0, 0, 0};
+    String s = "";
 
-    private Button send_btn;
-    private TextView buffetmeal;
-    private RadioGroup rg1,rg2,rg3;
+    public void UP(View v) {
+        for (int i = 0; i < btn_up.length; i++) {
+            if (v == btn_up[i]) {
+                e[i]++;//遞增，用陣列來存取每個餐點的數量
+                s = Integer.toString(e[i]);
+                num[i].setText(s);
 
-    private String ingredient = "野菇";
-    private String sauce = "茄汁";
-    private String extra = "5元";
+            }
+        }
+
+    }
+
+    public void Down(View v) {
+        for (int i = 0; i < btn_down.length; i++) {
+            if (v == btn_down[i]) {
+                if (e[i] > 0) {
+                    e[i]--;//遞減，用陣列來存取每個餐點的數量
+                    s = Integer.toString(e[i]);
+                    num[i].setText(s);
+                }
+            }
+        }
+    }
+
+    public void findView() {
+        for (int i = 0; i < btn_up.length; i++) {
+            btn_up[i] = (Button) this.findViewById(up[i]);
+            btn_down[i] = (Button) this.findViewById(down[i]);
+            num[i] = (TextView) this.findViewById(number[i]);
+        }
+    }
+    public void Enter(View v) {
+        for (int i = 0; i < e.length; i++) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("點餐結果")
+                    .setMessage(
+                            "野菇茄汁義大利麵:" + e[0] + "份\n" + "嫩雞白醬義大利麵:" + e[1] + "份\n" + "德式香腸紅醬義大利麵:"
+                                    + e[2] + "份\n" + "奶油培根義大利麵:" + e[3] + "份\n"
+                                    + "海鮮明太子義大利麵:" + e[4] + "份\n"+"總金額:"+(e[0]*85+e[1]*85+e[2]*100+e[3]*95+e[4]*110)+"元")
+                    .setPositiveButton("確定",
+                            new DialogInterface.OnClickListener() {
+                                // 訊息框裡加一個按鈕
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    dialog.cancel();// 返回點餐畫面
+                                }
+                            }).show();
+            break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pastamenu);
+        findView();
 
-        TextView ing = (TextView) findViewById(R.id.buffettext2);                                  //北科美食通標題
+        TextView ing = (TextView) findViewById(R.id.pastaingredienttext);                                  //北科美食通標題
         ing.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        TextView ing1 = (TextView) findViewById(R.id.buffettext1);                                  //北科美食通標題
+        TextView ing1 = (TextView) findViewById(R.id.extranoodletext);                                  //北科美食通標題
         ing1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        TextView ing2 = (TextView) findViewById(R.id.extranoodletext);                                  //北科美食通標題
+        TextView ing2 = (TextView) findViewById(R.id.pasta1);                                  //北科美食通標題
         ing2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        buffetmeal = findViewById(R.id.buffet_meal);
-        send_btn = findViewById(R.id.buffet_send);
+        TextView ing3 = (TextView) findViewById(R.id.pasta2);                                  //北科美食通標題
+        ing3.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        send_btn.setOnClickListener(new View.OnClickListener() {
+        TextView ing4 = (TextView) findViewById(R.id.pasta3);                                  //北科美食通標題
+        ing4.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing5 = (TextView) findViewById(R.id.pasta4);                                  //北科美食通標題
+        ing5.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing6 = (TextView) findViewById(R.id.pasta5);                                  //北科美食通標題
+        ing6.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        pasta_send = findViewById(R.id.pasta_send);
+        pasta_send.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { //將頁面轉到餐廳圖片頁面(slideimg)
+            public void onClick(View view) {
                 startActivityForResult(new Intent(pastamenu.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
                         apimap.class), 1);
-                Intent i = new Intent();
-                Bundle b = new Bundle();
-                b.putString("sugar",ingredient);
-                b.putString("drink",sauce);
-                b.putString("ice",extra);
-                i.putExtras(b);
-                setResult(111,i);
-                finish();
             }
         });
-
-        rg1 = findViewById(R.id.buffetmain);
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.buffetmain1:
-                        ingredient= "野菇";
-                        break;
-                    case R.id.buffetmain2:
-                        ingredient = "嫩雞";
-                        break;
-                    case R.id.buffetmain3:
-                        ingredient = "德式香腸";
-                        break;
-                    case R.id.buffetmain4:
-                        ingredient = "培根";
-                        break;
-                    case R.id.pastaingredient5:
-                        ingredient = "明太子";
-                        break;
-                    case R.id.pastaingredient6:
-                        ingredient = "海鮮";
-                        break;
-                }
-            }
-        });
-
-        rg2 = findViewById(R.id.buffetingredient);
-        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.buffetselectbtn:
-                        sauce = "微冰";
-                        break;
-                    case R.id.buffetselectbtn1:
-                        sauce = "少冰";
-                        break;
-                    case R.id.buffetselectbtn2:
-                        sauce = "正常冰";
-                        break;
-                    case R.id.buffetselectbtn3:
-                        sauce = "正常冰";
-                        break;
-                }
-            }
-        });
-
-        rg3 = findViewById(R.id.extranoodle);
-        rg3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.extranoodle1:
-                        sauce = "5元";
-                        break;
-                    case R.id.extranoodle2:
-                        sauce = "10元";
-                        break;
-
-                }
-            }
-        });
-
     }
-
-   @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(data == null) return;
-
-        if(requestCode == 1){
-            if(resultCode == 111){
-
-                Bundle b = data.getExtras();
-                String str1 = b.getString("drink");
-                String str2 = b.getString("sugar");
-                String str3 = b.getString("ice");
-                buffetmeal.setText(String.format("飲料: %s\n\n甜度: %s\n\n冰塊: %s\n\n",
-                        str1,
-                        str2,
-                        str3));
-            }
-        }
-    }
-
 }

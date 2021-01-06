@@ -3,6 +3,8 @@ package com.example.lab4;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -13,105 +15,104 @@ import android.widget.TextView;
 
 public class muffinmenu extends AppCompatActivity {
 
-    private Button send_btn3;
-    private TextView muffinmeal;
-    private RadioGroup rg1,rg2;
+    private Button muffin_send;
+    Button btn_up[] = new Button[8];
+    Button btn_down[] = new Button[8];
+    TextView num[] = new TextView[8];
+    int up[] = {R.id.btnup1, R.id.btnup2, R.id.btnup3, R.id.btnup4, R.id.btnup5, R.id.btnup6, R.id.btnup7, R.id.btnup8 };
+    int down[] = {R.id.btndown1, R.id.btndown2, R.id.btndown3, R.id.btndown4, R.id.btndown5,R.id.btndown6,R.id.btndown7,R.id.btndown8};
+    int number[] = {R.id.num_1, R.id.num_2, R.id.num_3, R.id.num_4, R.id.num_5,R.id.num_6,R.id.num_7,R.id.num_8};
+    int e[] = {0, 0, 0, 0, 0, 0, 0, 0};
+    String s = "";
 
-    private String ingredient = "野菇";
-    private String sauce = "茄汁";
-    private String extra = "5元";
+    public void UP(View v) {
+        for (int i = 0; i < btn_up.length; i++) {
+            if (v == btn_up[i]) {
+                e[i]++;//遞增，用陣列來存取每個餐點的數量
+                s = Integer.toString(e[i]);
+                num[i].setText(s);
+
+            }
+        }
+
+    }
+
+    public void Down(View v) {
+        for (int i = 0; i < btn_down.length; i++) {
+            if (v == btn_down[i]) {
+                if (e[i] > 0) {
+                    e[i]--;//遞減，用陣列來存取每個餐點的數量
+                    s = Integer.toString(e[i]);
+                    num[i].setText(s);
+                }
+            }
+        }
+    }
+
+    public void findView() {
+        for (int i = 0; i < btn_up.length; i++) {
+            btn_up[i] = (Button) this.findViewById(up[i]);
+            btn_down[i] = (Button) this.findViewById(down[i]);
+            num[i] = (TextView) this.findViewById(number[i]);
+        }
+    }
+    public void Enter(View v) {
+        for (int i = 0; i < e.length; i++) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("點餐結果")
+                    .setMessage(
+                            "鮮奶油鬆餅:" + e[0] + "份\n" + "巧克力鬆餅:" + e[1] + "份\n" + "草莓鬆餅:"
+                                    + e[2] + "份\n" + "蜂蜜鬆餅:" + e[3] + "份\n"
+                                    + "紅茶:" + e[4] + "杯\n"+"綠茶:" + e[5] + "杯\n"
+                                    + "鮮奶茶:" + e[6] + "杯\n"+"烏龍茶:" + e[7] + "杯\n"
+                                    +"總金額:"+(e[0]*50+e[1]*45+e[2]*50+e[3]*50+e[4]*25+e[5]*20+e[6]*35+e[7]*30)+"元")
+                    .setPositiveButton("確定",
+                            new DialogInterface.OnClickListener() {
+                                // 訊息框裡加一個按鈕
+                                @Override
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    dialog.cancel();// 返回點餐畫面
+                                }
+                            }).show();
+            break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.muffinmenu);
+        findView();
 
-        TextView ing = (TextView) findViewById(R.id.muffintext1);                                  //北科美食通標題
-        ing.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf = (TextView) findViewById(R.id.muffintext1);                                  //北科美食通標題
+        muf.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf1 = (TextView) findViewById(R.id.muffintext2);                                  //北科美食通標題
+        muf1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf2 = (TextView) findViewById(R.id.taste1);                                  //北科美食通標題
+        muf2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf3 = (TextView) findViewById(R.id.taste2);                                  //北科美食通標題
+        muf3.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf4 = (TextView) findViewById(R.id.taste3);                                  //北科美食通標題
+        muf4.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf5 = (TextView) findViewById(R.id.taste4);                                  //北科美食通標題
+        muf5.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf6 = (TextView) findViewById(R.id.taste5);                                  //北科美食通標題
+        muf6.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf7 = (TextView) findViewById(R.id.taste6);                                  //北科美食通標題
+        muf7.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf8 = (TextView) findViewById(R.id.taste7);                                  //北科美食通標題
+        muf8.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView muf9 = (TextView) findViewById(R.id.taste8);                                  //北科美食通標題
+        muf9.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        TextView ing1 = (TextView) findViewById(R.id.muffintext2);                                  //北科美食通標題
-        ing1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-
-
-        muffinmeal = findViewById(R.id.muffin_meal);
-        send_btn3 = findViewById(R.id.muffin_send);
-
-        send_btn3.setOnClickListener(new View.OnClickListener() {
+        muffin_send = findViewById(R.id.muffin_send);
+        muffin_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent();
-                Bundle b = new Bundle();
-                b.putString("sugar",ingredient);
-                b.putString("drink",sauce);
-                b.putString("ice",extra);
-                i.putExtras(b);
-                setResult(111,i);
-                finish();
+                startActivityForResult(new Intent(muffinmenu.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
+                        apimap.class), 1);
             }
         });
-
-        rg1 = findViewById(R.id.muffiningredient);
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.muffinselectbtn:
-                        ingredient= "野菇";
-                        break;
-                    case R.id.muffinselectbtn1:
-                        ingredient = "嫩雞";
-                        break;
-                    case R.id.muffinselectbtn2:
-                        ingredient = "德式香腸";
-                        break;
-                    case R.id.muffinselectbtn3:
-                        ingredient = "培根";
-                        break;
-                }
-            }
-        });
-
-        rg2 = findViewById(R.id.muffinmain);
-        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.muffinmain1:
-                        sauce = "微冰";
-                        break;
-                    case R.id.muffinmain2:
-                        sauce = "少冰";
-                        break;
-                    case R.id.muffinmain3:
-                        sauce = "正常冰";
-                        break;
-                    case R.id.muffinmain4:
-                        sauce = "正常冰";
-                        break;
-                }
-            }
-        });
-
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(data == null) return;
-
-        if(requestCode == 1){
-            if(resultCode == 111){
-
-                Bundle b = data.getExtras();
-                String str1 = b.getString("drink");
-                String str2 = b.getString("sugar");
-                String str3 = b.getString("ice");
-                muffinmeal.setText(String.format("飲料: %s\n\n甜度: %s\n\n冰塊: %s\n\n",
-                        str1,
-                        str2,
-                        str3));
-            }
-        }
-    }
-
 }

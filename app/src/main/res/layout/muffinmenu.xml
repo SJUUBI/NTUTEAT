@@ -1,13 +1,417 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".muffinmenu">
+
+  <Button
+      android:id="@+id/btnup8"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_8"
+      app:layout_constraintStart_toEndOf="@+id/num_8"
+      app:layout_constraintTop_toTopOf="@+id/num_8" />
+
+  <TextView
+      android:id="@+id/num_4"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown4"
+      app:layout_constraintStart_toEndOf="@+id/btndown4"
+      app:layout_constraintTop_toTopOf="@+id/btndown4" />
+
+  <TextView
+      android:id="@+id/num_8"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown8"
+      app:layout_constraintStart_toEndOf="@+id/btndown8"
+      app:layout_constraintTop_toTopOf="@+id/btndown8" />
+
+  <Button
+      android:id="@+id/btndown5"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste5"
+      app:layout_constraintStart_toEndOf="@+id/taste5"
+      app:layout_constraintTop_toTopOf="@+id/taste5" />
+
+  <TextView
+      android:id="@+id/muffintext1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="172dp"
+      android:layout_marginLeft="172dp"
+      android:text="飲料"
+      android:textColor="@android:color/black"
+      android:textSize="30sp"
+      app:layout_constraintStart_toEndOf="@+id/muffintext2"
+      app:layout_constraintTop_toTopOf="@+id/muffintext2" />
+
+  <Button
+      android:id="@+id/btndown6"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste6"
+      app:layout_constraintStart_toEndOf="@+id/taste6"
+      app:layout_constraintTop_toTopOf="@+id/taste6" />
+
+  <TextView
+      android:id="@+id/taste5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="6dp"
+      android:layout_marginLeft="6dp"
+      android:text="紅茶  25元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="@+id/btnup1"
+      app:layout_constraintStart_toEndOf="@+id/btnup1"
+      app:layout_constraintTop_toTopOf="@+id/btnup1" />
+
+  <Button
+      android:id="@+id/btnup3"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_3"
+      app:layout_constraintStart_toEndOf="@+id/num_3"
+      app:layout_constraintTop_toTopOf="@+id/num_3" />
+
+  <TextView
+      android:id="@+id/num_1"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown1"
+      app:layout_constraintEnd_toStartOf="@+id/btnup1"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toEndOf="@+id/btndown1"
+      app:layout_constraintTop_toTopOf="@+id/btndown1"
+      app:layout_constraintVertical_bias="0.428" />
+
+  <TextView
+      android:id="@+id/taste2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:layout_marginTop="40dp"
+      android:text="巧克力 45元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/taste1" />
+
+  <TextView
+      android:id="@+id/num_3"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown3"
+      app:layout_constraintStart_toEndOf="@+id/btndown3"
+      app:layout_constraintTop_toTopOf="@+id/btndown3" />
+
+  <TextView
+      android:id="@+id/num_7"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown7"
+      app:layout_constraintStart_toEndOf="@+id/btndown7"
+      app:layout_constraintTop_toTopOf="@+id/btndown7" />
+
+  <Button
+      android:id="@+id/btndown2"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste2"
+      app:layout_constraintStart_toEndOf="@+id/taste2"
+      app:layout_constraintTop_toTopOf="@+id/taste2"
+      app:layout_constraintVertical_bias="0.444" />
+
+  <TextView
+      android:id="@+id/taste8"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="6dp"
+      android:layout_marginLeft="6dp"
+      android:text="豆漿  30元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="@+id/btnup4"
+      app:layout_constraintStart_toEndOf="@+id/btnup4"
+      app:layout_constraintTop_toTopOf="@+id/btnup4" />
+
+  <TextView
+      android:id="@+id/num_2"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown2"
+      app:layout_constraintStart_toEndOf="@+id/btndown2"
+      app:layout_constraintTop_toTopOf="@+id/btndown2" />
+
+  <TextView
+      android:id="@+id/num_6"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown6"
+      app:layout_constraintStart_toEndOf="@+id/btndown6"
+      app:layout_constraintTop_toTopOf="@+id/btndown6" />
+
+  <TextView
+      android:id="@+id/taste4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:layout_marginTop="32dp"
+      android:text="蜂蜜   50元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/taste3" />
+
+  <TextView
+      android:id="@+id/taste7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="6dp"
+      android:layout_marginLeft="6dp"
+      android:text="奶茶  35元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="@+id/btnup3"
+      app:layout_constraintStart_toEndOf="@+id/btnup3"
+      app:layout_constraintTop_toTopOf="@+id/btnup3" />
+
+  <TextView
+      android:id="@+id/muffintext2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="52dp"
+      android:layout_marginLeft="52dp"
+      android:layout_marginTop="12dp"
+      android:text="鬆餅"
+      android:textColor="@android:color/black"
+      android:textSize="30sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/muffinmenuimg" />
+
+  <Button
+      android:id="@+id/btndown4"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste4"
+      app:layout_constraintStart_toEndOf="@+id/taste4"
+      app:layout_constraintTop_toTopOf="@+id/taste4" />
+
+  <Button
+      android:id="@+id/btnup5"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_5"
+      app:layout_constraintStart_toEndOf="@+id/num_5"
+      app:layout_constraintTop_toTopOf="@+id/num_5" />
+
+  <Button
+      android:id="@+id/btndown1"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste1"
+      app:layout_constraintStart_toEndOf="@+id/taste1"
+      app:layout_constraintTop_toTopOf="@+id/taste1" />
+
+  <Button
+      android:id="@+id/btndown7"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste7"
+      app:layout_constraintStart_toEndOf="@+id/taste7"
+      app:layout_constraintTop_toTopOf="@+id/taste7" />
+
+  <Button
+      android:id="@+id/btnup6"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_6"
+      app:layout_constraintStart_toEndOf="@+id/num_6"
+      app:layout_constraintTop_toTopOf="@+id/num_6" />
+
+  <TextView
+      android:id="@+id/num_5"
+      android:layout_width="8dp"
+      android:layout_height="19dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btndown5"
+      app:layout_constraintStart_toEndOf="@+id/btndown5"
+      app:layout_constraintTop_toTopOf="@+id/btndown5" />
+
+  <Button
+      android:id="@+id/btnup7"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_7"
+      app:layout_constraintStart_toEndOf="@+id/num_7"
+      app:layout_constraintTop_toTopOf="@+id/num_7" />
+
+  <Button
+      android:id="@+id/btnup1"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_1"
+      app:layout_constraintStart_toEndOf="@+id/num_1"
+      app:layout_constraintTop_toTopOf="@+id/num_1" />
+
+  <Button
+      android:id="@+id/btnup2"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_2"
+      app:layout_constraintStart_toEndOf="@+id/num_2"
+      app:layout_constraintTop_toTopOf="@+id/num_2" />
+
+  <TextView
+      android:id="@+id/taste3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:layout_marginTop="36dp"
+      android:text="草莓   50元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/taste2" />
+
+  <Button
+      android:id="@+id/btnup4"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num_4"
+      app:layout_constraintStart_toEndOf="@+id/num_4"
+      app:layout_constraintTop_toTopOf="@+id/num_4" />
+
+  <TextView
+      android:id="@+id/taste1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:layout_marginTop="28dp"
+      android:text="鮮奶油 50元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/muffintext2" />
+
+  <Button
+      android:id="@+id/btndown3"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="2dp"
+      android:layout_marginLeft="2dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste3"
+      app:layout_constraintStart_toEndOf="@+id/taste3"
+      app:layout_constraintTop_toTopOf="@+id/taste3" />
+
+  <TextView
+      android:id="@+id/taste6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="6dp"
+      android:layout_marginLeft="6dp"
+      android:text="綠茶  20元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="@+id/btnup2"
+      app:layout_constraintStart_toEndOf="@+id/btnup2"
+      app:layout_constraintTop_toTopOf="@+id/btnup2" />
+
+  <Button
+      android:id="@+id/btndown8"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="8dp"
+      android:layout_marginLeft="8dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/taste8"
+      app:layout_constraintStart_toEndOf="@+id/taste8"
+      app:layout_constraintTop_toTopOf="@+id/taste8" />
 
   <ImageButton
       android:id="@+id/muffinmenuimg"
@@ -24,167 +428,29 @@
       app:layout_constraintTop_toTopOf="parent"
       app:srcCompat="@drawable/c3" />
 
-  <TextView
-      android:id="@+id/muffintext2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="104dp"
-      android:layout_marginLeft="104dp"
-      android:layout_marginTop="32dp"
-      android:text="口味"
-      android:textColor="@android:color/black"
-      android:textSize="22sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/muffinmenuimg" />
-
-  <RadioGroup
-      android:id="@+id/muffiningredient"
-      android:layout_width="wrap_content"
-      android:layout_height="128dp"
-      android:layout_marginTop="16dp"
-      app:layout_constraintEnd_toEndOf="@+id/muffintext2"
-      app:layout_constraintStart_toStartOf="@+id/muffintext2"
-      app:layout_constraintTop_toBottomOf="@+id/muffintext2">
-
-    <RadioButton
-        android:id="@+id/muffinselectbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="true"
-        android:text="藍莓"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="180dp" />
-
-    <RadioButton
-        android:id="@+id/muffinselectbtn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="false"
-        android:text="草莓"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="148dp" />
-
-    <RadioButton
-        android:id="@+id/muffinselectbtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="false"
-        android:text="香草"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="116dp" />
-
-    <RadioButton
-        android:id="@+id/muffinselectbtn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="false"
-        android:text="巧克力"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="84dp" />
-  </RadioGroup>
-
-  <TextView
-      android:id="@+id/muffintext1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="100dp"
-      android:layout_marginLeft="100dp"
-      android:text="飲料"
-      android:textColor="@android:color/black"
-      android:textSize="22sp"
-      app:layout_constraintStart_toEndOf="@+id/muffintext2"
-      app:layout_constraintTop_toTopOf="@+id/muffintext2" />
-
-  <RadioGroup
-      android:id="@+id/muffinmain"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      app:layout_constraintEnd_toEndOf="@+id/muffintext1"
-      app:layout_constraintStart_toStartOf="@+id/muffintext1"
-      app:layout_constraintTop_toBottomOf="@+id/muffintext1">
-
-    <RadioButton
-        android:id="@+id/muffinmain1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="true"
-        android:text="鐵觀音" />
-
-    <RadioButton
-        android:id="@+id/muffinmain2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="false"
-        android:text="伯爵奶茶" />
-
-    <RadioButton
-        android:id="@+id/muffinmain3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="false"
-        android:text="紅茶" />
-
-    <RadioButton
-        android:id="@+id/muffinmain4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:buttonTint="@color/colorPrimary"
-        android:checked="false"
-        android:text="水果茶" />
-
-
-  </RadioGroup>
-
   <Button
       android:id="@+id/muffin_send"
-      android:layout_width="114dp"
-      android:layout_height="54dp"
-      android:layout_marginTop="28dp"
+      android:layout_width="99dp"
+      android:layout_height="41dp"
+      android:layout_marginStart="80dp"
+      android:layout_marginLeft="80dp"
+      android:layout_marginTop="16dp"
       android:background="@color/colorPrimary"
       android:text="送出"
       android:textColor="@color/colorAccent"
-      app:layout_constraintEnd_toEndOf="@+id/muffinensure"
-      app:layout_constraintStart_toStartOf="@+id/muffinensure"
-      app:layout_constraintTop_toBottomOf="@+id/muffin_meal" />
-
-  <TextView
-      android:id="@+id/muffinensure"
-      android:layout_width="wrap_content"
-      android:layout_height="29dp"
-      android:layout_marginTop="24dp"
-      android:text="確認餐點"
-      android:textColor="@android:color/black"
-      android:textSize="22sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.504"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/muffinmain" />
+      app:layout_constraintTop_toBottomOf="@+id/taste4" />
 
-  <TextView
-      android:id="@+id/muffin_meal"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="16dp"
-      android:text="配料:無               醬料: 無              加麵: 無"
-      android:textSize="22sp"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/muffinensure" />
+  <Button
+      android:id="@+id/btn_enter2"
+      android:layout_width="107dp"
+      android:layout_height="46dp"
+      android:layout_marginStart="50dp"
+      android:layout_marginLeft="50dp"
+      android:onClick="Enter"
+      android:text="確認"
+      app:layout_constraintBottom_toBottomOf="@+id/muffin_send"
+      app:layout_constraintStart_toEndOf="@+id/muffin_send"
+      app:layout_constraintTop_toTopOf="@+id/muffin_send" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
