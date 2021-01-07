@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class pastamenu extends AppCompatActivity {
     private Button pasta_send;
     Button btn_up[] = new Button[5];
@@ -22,6 +24,7 @@ public class pastamenu extends AppCompatActivity {
     int down[] = {R.id.btn_down1, R.id.btn_down2, R.id.btn_down3, R.id.btn_down4, R.id.btn_down5};
     int number[] = {R.id.num1, R.id.num2, R.id.num3, R.id.num4, R.id.num5};
     int e[] = {0, 0, 0, 0, 0};
+    String[] meal=new String[]{"野菇茄汁義大利麵","嫩雞白醬義大利麵","德式香腸紅醬義大利麵","奶油培根義大利麵", "海鮮明太子義大利麵"};
     String s = "";
 
     public void UP(View v) {
@@ -32,6 +35,7 @@ public class pastamenu extends AppCompatActivity {
                 num[i].setText(s);
 
             }
+
         }
 
     }
@@ -53,11 +57,34 @@ public class pastamenu extends AppCompatActivity {
             btn_up[i] = (Button) this.findViewById(up[i]);
             btn_down[i] = (Button) this.findViewById(down[i]);
             num[i] = (TextView) this.findViewById(number[i]);
+
         }
     }
+
+
+
     public void Enter(View v) {
-        for (int i = 0; i < e.length; i++) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        Intent i = new Intent();
+        Bundle b = new Bundle();
+
+        b.putString("meal1",meal[0]);
+        b.putString("meal2",meal[1]);
+        b.putString("meal3",meal[2]);
+        b.putString("meal4",meal[3]);
+        b.putString("meal5",meal[4]);
+        b.putInt("number1",e[0]);
+        b.putInt("number2",e[1]);
+        b.putInt("number3",e[2]);
+        b.putInt("number4",e[3]);
+        b.putInt("number5",e[4]);
+        b.putInt("price", (e[0]*85+e[1]*85+e[2]*100+e[3]*95+e[4]*110));
+        i.putExtras(b);
+        setResult(101, i);
+        finish();
+        /*startActivityForResult(new Intent(pastamenu.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
+                mealtest.class), 1);*/
+           /* AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("點餐結果")
                     .setMessage(
                             "野菇茄汁義大利麵:" + e[0] + "份\n" + "嫩雞白醬義大利麵:" + e[1] + "份\n" + "德式香腸紅醬義大利麵:"
@@ -71,9 +98,9 @@ public class pastamenu extends AppCompatActivity {
                                                     int which) {
                                     dialog.cancel();// 返回點餐畫面
                                 }
-                            }).show();
-            break;
-        }
+                            }).show();*/
+
+
     }
 
     @Override
@@ -103,13 +130,18 @@ public class pastamenu extends AppCompatActivity {
         TextView ing6 = (TextView) findViewById(R.id.pasta5);                                  //北科美食通標題
         ing6.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        pasta_send = findViewById(R.id.pasta_send);
+        /*pasta_send = findViewById(R.id.pasta_send);
         pasta_send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivityForResult(new Intent(pastamenu.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
                         apimap.class), 1);
+
             }
-        });
+
+            });*/
+
+
+
+        }
     }
-}

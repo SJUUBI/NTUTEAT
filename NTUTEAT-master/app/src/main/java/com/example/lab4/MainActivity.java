@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
         btn = findViewById(R.id.btn_choice);                                                        //從XML引入ID(btn_choice)
         btn2 = findViewById(R.id.btn_res);                                                          //從XML引入ID(btn_res)
-        btn3 = findViewById(R.id.btn_sql);
 
         //---------------------------------------------------------------------------------------------字體飛入動畫(上而下)
         AnimationSet animationSet1 = new AnimationSet(true);
@@ -96,17 +95,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                startActivityForResult(new Intent(MainActivity.this,                  //將頁面轉到點餐頁面(MainActivity2)
-                        sqlite.class), 1);                                       //將頁面轉到點餐頁面(MainActivity2)
-
-
-            }
-
-        });
 
     }
 

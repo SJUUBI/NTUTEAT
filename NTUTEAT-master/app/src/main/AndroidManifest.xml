@@ -13,6 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".mealtest5"></activity>
+        <activity android:name=".mealtest4" />
+        <activity android:name=".mealtest2" />
+        <activity android:name=".mealtest3" />
+        <activity android:name=".mealtest1" />
+        <activity android:name=".mealtest" />
 
         <uses-library
             android:name="org.apache.http.legacy"

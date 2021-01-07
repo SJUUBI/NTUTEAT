@@ -8,411 +8,6 @@
     android:background="@color/colorAccent"
     tools:context=".muffinmenu">
 
-  <Button
-      android:id="@+id/btnup8"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_8"
-      app:layout_constraintStart_toEndOf="@+id/num_8"
-      app:layout_constraintTop_toTopOf="@+id/num_8" />
-
-  <TextView
-      android:id="@+id/num_4"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown4"
-      app:layout_constraintStart_toEndOf="@+id/btndown4"
-      app:layout_constraintTop_toTopOf="@+id/btndown4" />
-
-  <TextView
-      android:id="@+id/num_8"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown8"
-      app:layout_constraintStart_toEndOf="@+id/btndown8"
-      app:layout_constraintTop_toTopOf="@+id/btndown8" />
-
-  <Button
-      android:id="@+id/btndown5"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginLeft="8dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste5"
-      app:layout_constraintStart_toEndOf="@+id/taste5"
-      app:layout_constraintTop_toTopOf="@+id/taste5" />
-
-  <TextView
-      android:id="@+id/muffintext1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="172dp"
-      android:layout_marginLeft="172dp"
-      android:text="飲料"
-      android:textColor="@android:color/black"
-      android:textSize="30sp"
-      app:layout_constraintStart_toEndOf="@+id/muffintext2"
-      app:layout_constraintTop_toTopOf="@+id/muffintext2" />
-
-  <Button
-      android:id="@+id/btndown6"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginLeft="8dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste6"
-      app:layout_constraintStart_toEndOf="@+id/taste6"
-      app:layout_constraintTop_toTopOf="@+id/taste6" />
-
-  <TextView
-      android:id="@+id/taste5"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="6dp"
-      android:layout_marginLeft="6dp"
-      android:text="紅茶  25元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="@+id/btnup1"
-      app:layout_constraintStart_toEndOf="@+id/btnup1"
-      app:layout_constraintTop_toTopOf="@+id/btnup1" />
-
-  <Button
-      android:id="@+id/btnup3"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_3"
-      app:layout_constraintStart_toEndOf="@+id/num_3"
-      app:layout_constraintTop_toTopOf="@+id/num_3" />
-
-  <TextView
-      android:id="@+id/num_1"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown1"
-      app:layout_constraintEnd_toStartOf="@+id/btnup1"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toEndOf="@+id/btndown1"
-      app:layout_constraintTop_toTopOf="@+id/btndown1"
-      app:layout_constraintVertical_bias="0.428" />
-
-  <TextView
-      android:id="@+id/taste2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:layout_marginTop="40dp"
-      android:text="巧克力 45元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/taste1" />
-
-  <TextView
-      android:id="@+id/num_3"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown3"
-      app:layout_constraintStart_toEndOf="@+id/btndown3"
-      app:layout_constraintTop_toTopOf="@+id/btndown3" />
-
-  <TextView
-      android:id="@+id/num_7"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown7"
-      app:layout_constraintStart_toEndOf="@+id/btndown7"
-      app:layout_constraintTop_toTopOf="@+id/btndown7" />
-
-  <Button
-      android:id="@+id/btndown2"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste2"
-      app:layout_constraintStart_toEndOf="@+id/taste2"
-      app:layout_constraintTop_toTopOf="@+id/taste2"
-      app:layout_constraintVertical_bias="0.444" />
-
-  <TextView
-      android:id="@+id/taste8"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="6dp"
-      android:layout_marginLeft="6dp"
-      android:text="豆漿  30元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="@+id/btnup4"
-      app:layout_constraintStart_toEndOf="@+id/btnup4"
-      app:layout_constraintTop_toTopOf="@+id/btnup4" />
-
-  <TextView
-      android:id="@+id/num_2"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown2"
-      app:layout_constraintStart_toEndOf="@+id/btndown2"
-      app:layout_constraintTop_toTopOf="@+id/btndown2" />
-
-  <TextView
-      android:id="@+id/num_6"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown6"
-      app:layout_constraintStart_toEndOf="@+id/btndown6"
-      app:layout_constraintTop_toTopOf="@+id/btndown6" />
-
-  <TextView
-      android:id="@+id/taste4"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:layout_marginTop="32dp"
-      android:text="蜂蜜   50元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/taste3" />
-
-  <TextView
-      android:id="@+id/taste7"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="6dp"
-      android:layout_marginLeft="6dp"
-      android:text="奶茶  35元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="@+id/btnup3"
-      app:layout_constraintStart_toEndOf="@+id/btnup3"
-      app:layout_constraintTop_toTopOf="@+id/btnup3" />
-
-  <TextView
-      android:id="@+id/muffintext2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="52dp"
-      android:layout_marginLeft="52dp"
-      android:layout_marginTop="12dp"
-      android:text="鬆餅"
-      android:textColor="@android:color/black"
-      android:textSize="30sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/muffinmenuimg" />
-
-  <Button
-      android:id="@+id/btndown4"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste4"
-      app:layout_constraintStart_toEndOf="@+id/taste4"
-      app:layout_constraintTop_toTopOf="@+id/taste4" />
-
-  <Button
-      android:id="@+id/btnup5"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_5"
-      app:layout_constraintStart_toEndOf="@+id/num_5"
-      app:layout_constraintTop_toTopOf="@+id/num_5" />
-
-  <Button
-      android:id="@+id/btndown1"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste1"
-      app:layout_constraintStart_toEndOf="@+id/taste1"
-      app:layout_constraintTop_toTopOf="@+id/taste1" />
-
-  <Button
-      android:id="@+id/btndown7"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginLeft="8dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste7"
-      app:layout_constraintStart_toEndOf="@+id/taste7"
-      app:layout_constraintTop_toTopOf="@+id/taste7" />
-
-  <Button
-      android:id="@+id/btnup6"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_6"
-      app:layout_constraintStart_toEndOf="@+id/num_6"
-      app:layout_constraintTop_toTopOf="@+id/num_6" />
-
-  <TextView
-      android:id="@+id/num_5"
-      android:layout_width="8dp"
-      android:layout_height="19dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:text="0"
-      app:layout_constraintBottom_toBottomOf="@+id/btndown5"
-      app:layout_constraintStart_toEndOf="@+id/btndown5"
-      app:layout_constraintTop_toTopOf="@+id/btndown5" />
-
-  <Button
-      android:id="@+id/btnup7"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_7"
-      app:layout_constraintStart_toEndOf="@+id/num_7"
-      app:layout_constraintTop_toTopOf="@+id/num_7" />
-
-  <Button
-      android:id="@+id/btnup1"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_1"
-      app:layout_constraintStart_toEndOf="@+id/num_1"
-      app:layout_constraintTop_toTopOf="@+id/num_1" />
-
-  <Button
-      android:id="@+id/btnup2"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_2"
-      app:layout_constraintStart_toEndOf="@+id/num_2"
-      app:layout_constraintTop_toTopOf="@+id/num_2" />
-
-  <TextView
-      android:id="@+id/taste3"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:layout_marginTop="36dp"
-      android:text="草莓   50元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/taste2" />
-
-  <Button
-      android:id="@+id/btnup4"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:onClick="UP"
-      android:text="+"
-      app:layout_constraintBottom_toBottomOf="@+id/num_4"
-      app:layout_constraintStart_toEndOf="@+id/num_4"
-      app:layout_constraintTop_toTopOf="@+id/num_4" />
-
-  <TextView
-      android:id="@+id/taste1"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="4dp"
-      android:layout_marginLeft="4dp"
-      android:layout_marginTop="28dp"
-      android:text="鮮奶油 50元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/muffintext2" />
-
-  <Button
-      android:id="@+id/btndown3"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="2dp"
-      android:layout_marginLeft="2dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste3"
-      app:layout_constraintStart_toEndOf="@+id/taste3"
-      app:layout_constraintTop_toTopOf="@+id/taste3" />
-
-  <TextView
-      android:id="@+id/taste6"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="6dp"
-      android:layout_marginLeft="6dp"
-      android:text="綠茶  20元"
-      android:textColor="@android:color/black"
-      android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="@+id/btnup2"
-      app:layout_constraintStart_toEndOf="@+id/btnup2"
-      app:layout_constraintTop_toTopOf="@+id/btnup2" />
-
-  <Button
-      android:id="@+id/btndown8"
-      android:layout_width="37dp"
-      android:layout_height="37dp"
-      android:layout_marginStart="8dp"
-      android:layout_marginLeft="8dp"
-      android:onClick="Down"
-      android:text="-"
-      app:layout_constraintBottom_toBottomOf="@+id/taste8"
-      app:layout_constraintStart_toEndOf="@+id/taste8"
-      app:layout_constraintTop_toTopOf="@+id/taste8" />
-
   <ImageButton
       android:id="@+id/muffinmenuimg"
       android:layout_width="405dp"
@@ -428,29 +23,281 @@
       app:layout_constraintTop_toTopOf="parent"
       app:srcCompat="@drawable/c3" />
 
-  <Button
-      android:id="@+id/muffin_send"
-      android:layout_width="99dp"
-      android:layout_height="41dp"
-      android:layout_marginStart="80dp"
-      android:layout_marginLeft="80dp"
-      android:layout_marginTop="16dp"
-      android:background="@color/colorPrimary"
-      android:text="送出"
-      android:textColor="@color/colorAccent"
+  <TextView
+      android:id="@+id/extranoodletext"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="數量"
+      android:textColor="@android:color/black"
+      android:textSize="30sp"
+      app:layout_constraintStart_toStartOf="@+id/btn_down1"
+      app:layout_constraintTop_toTopOf="@+id/pastaingredienttext" />
+
+  <TextView
+      android:id="@+id/num1"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down1"
+      app:layout_constraintEnd_toStartOf="@+id/btn_up1"
+      app:layout_constraintHorizontal_bias="0.571"
+      app:layout_constraintStart_toEndOf="@+id/btn_down1"
+      app:layout_constraintTop_toTopOf="@+id/btn_down1" />
+
+  <TextView
+      android:id="@+id/num5"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down5"
+      app:layout_constraintStart_toEndOf="@+id/btn_down5"
+      app:layout_constraintTop_toTopOf="@+id/btn_down5" />
+
+  <TextView
+      android:id="@+id/pasta1"
+      android:layout_width="220dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:layout_marginTop="20dp"
+      android:text="鮮奶油鬆餅　　    50元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/taste4" />
+      app:layout_constraintTop_toBottomOf="@+id/pastaingredienttext" />
+
+  <TextView
+      android:id="@+id/num2"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down2"
+      app:layout_constraintStart_toEndOf="@+id/btn_down2"
+      app:layout_constraintTop_toTopOf="@+id/btn_down2" />
 
   <Button
-      android:id="@+id/btn_enter2"
-      android:layout_width="107dp"
-      android:layout_height="46dp"
-      android:layout_marginStart="50dp"
-      android:layout_marginLeft="50dp"
+      android:id="@+id/btn_up2"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num2"
+      app:layout_constraintStart_toEndOf="@+id/num2"
+      app:layout_constraintTop_toTopOf="@+id/num2" />
+
+  <Button
+      android:id="@+id/btn_down4"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta4"
+      app:layout_constraintStart_toEndOf="@+id/pasta4"
+      app:layout_constraintTop_toTopOf="@+id/pasta4" />
+
+  <Button
+      android:id="@+id/btn_down5"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta5"
+      app:layout_constraintStart_toEndOf="@+id/pasta5"
+      app:layout_constraintTop_toTopOf="@+id/pasta5" />
+
+  <TextView
+      android:id="@+id/pasta3"
+      android:layout_width="220dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:layout_marginTop="20dp"
+      android:text="草莓鬆餅　　　    50元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pasta2" />
+
+  <TextView
+      android:id="@+id/pasta2"
+      android:layout_width="220dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:layout_marginTop="20dp"
+      android:text="巧克力鬆餅　　    45元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pasta1" />
+
+  <TextView
+      android:id="@+id/pasta4"
+      android:layout_width="220dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:layout_marginTop="20dp"
+      android:text="蜂蜜鬆餅　　　    50元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pasta3" />
+
+  <Button
+      android:id="@+id/btn_down1"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta1"
+      app:layout_constraintStart_toEndOf="@+id/pasta1"
+      app:layout_constraintTop_toTopOf="@+id/pasta1" />
+
+  <Button
+      android:id="@+id/btn_down2"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta2"
+      app:layout_constraintStart_toEndOf="@+id/pasta2"
+      app:layout_constraintTop_toTopOf="@+id/pasta2" />
+
+  <Button
+      android:id="@+id/btn_up3"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num3"
+      app:layout_constraintStart_toEndOf="@+id/num3"
+      app:layout_constraintTop_toTopOf="@+id/num3" />
+
+  <TextView
+      android:id="@+id/num3"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down3"
+      app:layout_constraintStart_toEndOf="@+id/btn_down3"
+      app:layout_constraintTop_toTopOf="@+id/btn_down3" />
+
+  <TextView
+      android:id="@+id/pasta5"
+      android:layout_width="220dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:layout_marginTop="20dp"
+      android:text="鮮奶油蜂蜜鬆餅     55元"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pasta4" />
+
+  <Button
+      android:id="@+id/btn_up5"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num5"
+      app:layout_constraintStart_toEndOf="@+id/num5"
+      app:layout_constraintTop_toTopOf="@+id/num5" />
+
+  <Button
+      android:id="@+id/btn_up4"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num4"
+      app:layout_constraintStart_toEndOf="@+id/num4"
+      app:layout_constraintTop_toTopOf="@+id/num4" />
+
+  <Button
+      android:id="@+id/btn_down3"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta3"
+      app:layout_constraintStart_toEndOf="@+id/pasta3"
+      app:layout_constraintTop_toTopOf="@+id/pasta3" />
+
+  <Button
+      android:id="@+id/btn_up1"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num1"
+      app:layout_constraintStart_toEndOf="@+id/num1"
+      app:layout_constraintTop_toTopOf="@+id/num1" />
+
+  <TextView
+      android:id="@+id/num4"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down4"
+      app:layout_constraintStart_toEndOf="@+id/btn_down4"
+      app:layout_constraintTop_toTopOf="@+id/btn_down4" />
+
+  <TextView
+      android:id="@+id/pastaingredienttext"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:text="鬆餅"
+      android:textColor="@android:color/black"
+      android:textSize="30sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/muffinmenuimg" />
+
+  <Button
+      android:id="@+id/btn_enter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:background="@color/colorPrimary"
       android:onClick="Enter"
       android:text="確認"
-      app:layout_constraintBottom_toBottomOf="@+id/muffin_send"
-      app:layout_constraintStart_toEndOf="@+id/muffin_send"
-      app:layout_constraintTop_toTopOf="@+id/muffin_send" />
+      android:textColor="@color/colorAccent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pasta5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

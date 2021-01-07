@@ -24,151 +24,280 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/c6" />
 
+     <TextView
+      android:id="@+id/extranoodletext"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="數量"
+      android:textColor="@android:color/black"
+      android:textSize="30sp"
+      app:layout_constraintStart_toStartOf="@+id/btn_down1"
+      app:layout_constraintTop_toTopOf="@+id/pastaingredienttext" />
+
+  <TextView
+      android:id="@+id/num1"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down1"
+      app:layout_constraintEnd_toStartOf="@+id/btn_up1"
+      app:layout_constraintHorizontal_bias="0.571"
+      app:layout_constraintStart_toEndOf="@+id/btn_down1"
+      app:layout_constraintTop_toTopOf="@+id/btn_down1" />
+
+  <TextView
+      android:id="@+id/num5"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down5"
+      app:layout_constraintStart_toEndOf="@+id/btn_down5"
+      app:layout_constraintTop_toTopOf="@+id/btn_down5" />
+
     <TextView
-        android:id="@+id/louisatext2"
+        android:id="@+id/pasta1"
+        android:layout_width="220dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="小農拿鐵　     55元"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pastaingredienttext" />
+
+  <TextView
+      android:id="@+id/num2"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down2"
+      app:layout_constraintStart_toEndOf="@+id/btn_down2"
+      app:layout_constraintTop_toTopOf="@+id/btn_down2" />
+
+  <Button
+      android:id="@+id/btn_up2"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintStart_toStartOf="@+id/btn_up3"
+      app:layout_constraintTop_toTopOf="@+id/num2" />
+
+  <Button
+      android:id="@+id/btn_down4"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta4"
+      app:layout_constraintStart_toEndOf="@+id/pasta4"
+      app:layout_constraintTop_toTopOf="@+id/pasta4" />
+
+  <Button
+      android:id="@+id/btn_down5"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta5"
+      app:layout_constraintStart_toEndOf="@+id/pasta5"
+      app:layout_constraintTop_toTopOf="@+id/pasta5" />
+
+    <TextView
+        android:id="@+id/pasta3"
+        android:layout_width="220dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="焦糖拿鐵　     75元"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasta2" />
+
+    <TextView
+        android:id="@+id/pasta2"
+        android:layout_width="220dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="美式咖啡　     60元"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasta1" />
+
+    <TextView
+        android:id="@+id/pasta4"
+        android:layout_width="220dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="伯爵鮮奶　     50元"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasta3" />
+
+  <Button
+      android:id="@+id/btn_down1"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta1"
+      app:layout_constraintStart_toEndOf="@+id/pasta1"
+      app:layout_constraintTop_toTopOf="@+id/pasta1" />
+
+  <Button
+      android:id="@+id/btn_down2"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta2"
+      app:layout_constraintStart_toEndOf="@+id/pasta2"
+      app:layout_constraintTop_toTopOf="@+id/pasta2" />
+
+  <Button
+      android:id="@+id/btn_up3"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num3"
+      app:layout_constraintStart_toEndOf="@+id/num3"
+      app:layout_constraintTop_toTopOf="@+id/num3" />
+
+  <TextView
+      android:id="@+id/num3"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down3"
+      app:layout_constraintStart_toEndOf="@+id/btn_down3"
+      app:layout_constraintTop_toTopOf="@+id/btn_down3" />
+
+    <TextView
+        android:id="@+id/pasta5"
+        android:layout_width="220dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="熱巧克力　     50元"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasta4" />
+
+  <Button
+      android:id="@+id/btn_up5"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num5"
+      app:layout_constraintStart_toEndOf="@+id/num5"
+      app:layout_constraintTop_toTopOf="@+id/num5" />
+
+  <Button
+      android:id="@+id/btn_up4"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num4"
+      app:layout_constraintStart_toEndOf="@+id/num4"
+      app:layout_constraintTop_toTopOf="@+id/num4" />
+
+  <Button
+      android:id="@+id/btn_down3"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:onClick="Down"
+      android:text="-"
+      app:layout_constraintBottom_toBottomOf="@+id/pasta3"
+      app:layout_constraintStart_toEndOf="@+id/pasta3"
+      app:layout_constraintTop_toTopOf="@+id/pasta3" />
+
+  <Button
+      android:id="@+id/btn_up1"
+      android:layout_width="37dp"
+      android:layout_height="37dp"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:onClick="UP"
+      android:text="+"
+      app:layout_constraintBottom_toBottomOf="@+id/num1"
+      app:layout_constraintEnd_toEndOf="@+id/btn_up2"
+      app:layout_constraintStart_toEndOf="@+id/num1"
+      app:layout_constraintTop_toTopOf="@+id/num1" />
+
+  <TextView
+      android:id="@+id/num4"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginLeft="20dp"
+      android:text="0"
+      app:layout_constraintBottom_toBottomOf="@+id/btn_down4"
+      app:layout_constraintStart_toEndOf="@+id/btn_down4"
+      app:layout_constraintTop_toTopOf="@+id/btn_down4" />
+
+    <TextView
+        android:id="@+id/pastaingredienttext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginTop="44dp"
-        android:text="飲品"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="飲料"
         android:textColor="@android:color/black"
-        android:textSize="22sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/louisamenuimg" />
 
-    <RadioGroup
-        android:id="@+id/louisaingredient"
-        android:layout_width="wrap_content"
-        android:layout_height="128dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/louisatext2"
-        app:layout_constraintStart_toStartOf="@+id/louisatext2"
-        app:layout_constraintTop_toBottomOf="@+id/louisatext2">
+  <Button
+      android:id="@+id/btn_enter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:background="@color/colorPrimary"
+      android:onClick="Enter"
+      android:text="確認"
+      android:textColor="@color/colorAccent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/pasta5" />
 
-        <RadioButton
-            android:id="@+id/louisaselectbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimary"
-            android:checked="true"
-            android:text="小農拿鐵"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="180dp" />
-
-        <RadioButton
-            android:id="@+id/louisaselectbtn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimary"
-            android:checked="false"
-            android:text="美式"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="148dp" />
-
-        <RadioButton
-            android:id="@+id/louisaselectbtn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimary"
-            android:checked="false"
-            android:text="曼特寧"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="116dp" />
-
-        <RadioButton
-            android:id="@+id/louisaselectbtn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimary"
-            android:checked="false"
-            android:text="哥倫比亞"
-            tools:layout_editor_absoluteX="180dp"
-            tools:layout_editor_absoluteY="84dp" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/louisatext1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginLeft="136dp"
-        android:text="茶飲"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/louisatext2"
-        app:layout_constraintTop_toTopOf="@+id/louisatext2" />
-
-    <RadioGroup
-        android:id="@+id/louisamain"
-        android:layout_width="46dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/louisatext1"
-        app:layout_constraintStart_toStartOf="@+id/louisatext1"
-        app:layout_constraintTop_toBottomOf="@+id/louisatext1">
-
-        <RadioButton
-            android:id="@+id/louisamain1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimary"
-            android:checked="true"
-            android:text="冰" />
-
-        <RadioButton
-            android:id="@+id/louisamain2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:buttonTint="@color/colorPrimary"
-            android:checked="false"
-            android:text="熱" />
-
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/louisa_send"
-        android:layout_width="114dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="44dp"
-        android:background="@color/colorPrimary"
-        android:text="送出"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="@+id/louisaensure"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="@+id/louisaensure"
-        app:layout_constraintTop_toBottomOf="@+id/louisaensure" />
-
-    <TextView
-        android:id="@+id/louisaensure"
-        android:layout_width="wrap_content"
-        android:layout_height="29dp"
-        android:layout_marginTop="32dp"
-        android:text="確認餐點"
-        android:textColor="@android:color/black"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/louisamain" />
-
-    <TextView
-        android:id="@+id/louisa_meal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="配料:無               醬料: 無              加麵: 無"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/louisaensure" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

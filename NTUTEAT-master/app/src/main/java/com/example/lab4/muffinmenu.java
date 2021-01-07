@@ -15,14 +15,15 @@ import android.widget.TextView;
 
 public class muffinmenu extends AppCompatActivity {
 
-    private Button muffin_send;
-    Button btn_up[] = new Button[8];
-    Button btn_down[] = new Button[8];
-    TextView num[] = new TextView[8];
-    int up[] = {R.id.btnup1, R.id.btnup2, R.id.btnup3, R.id.btnup4, R.id.btnup5, R.id.btnup6, R.id.btnup7, R.id.btnup8 };
-    int down[] = {R.id.btndown1, R.id.btndown2, R.id.btndown3, R.id.btndown4, R.id.btndown5,R.id.btndown6,R.id.btndown7,R.id.btndown8};
-    int number[] = {R.id.num_1, R.id.num_2, R.id.num_3, R.id.num_4, R.id.num_5,R.id.num_6,R.id.num_7,R.id.num_8};
-    int e[] = {0, 0, 0, 0, 0, 0, 0, 0};
+    private
+    Button btn_up[] = new Button[5];
+    Button btn_down[] = new Button[5];
+    TextView num[] = new TextView[5];
+    int up[] = {R.id.btn_up1, R.id.btn_up2, R.id.btn_up3, R.id.btn_up4, R.id.btn_up5};
+    int down[] = {R.id.btn_down1, R.id.btn_down2, R.id.btn_down3, R.id.btn_down4, R.id.btn_down5};
+    int number[] = {R.id.num1, R.id.num2, R.id.num3, R.id.num4, R.id.num5};
+    int e[] = {0, 0, 0, 0, 0};
+    String[] meal=new String[]{"鮮奶油鬆餅","巧克力鬆餅","草莓鬆餅","蜂蜜鬆餅","鮮奶油蜂蜜鬆餅"};
     String s = "";
 
     public void UP(View v) {
@@ -57,26 +58,23 @@ public class muffinmenu extends AppCompatActivity {
         }
     }
     public void Enter(View v) {
-        for (int i = 0; i < e.length; i++) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("點餐結果")
-                    .setMessage(
-                            "鮮奶油鬆餅:" + e[0] + "份\n" + "巧克力鬆餅:" + e[1] + "份\n" + "草莓鬆餅:"
-                                    + e[2] + "份\n" + "蜂蜜鬆餅:" + e[3] + "份\n"
-                                    + "紅茶:" + e[4] + "杯\n"+"綠茶:" + e[5] + "杯\n"
-                                    + "鮮奶茶:" + e[6] + "杯\n"+"烏龍茶:" + e[7] + "杯\n"
-                                    +"總金額:"+(e[0]*50+e[1]*45+e[2]*50+e[3]*50+e[4]*25+e[5]*20+e[6]*35+e[7]*30)+"元")
-                    .setPositiveButton("確定",
-                            new DialogInterface.OnClickListener() {
-                                // 訊息框裡加一個按鈕
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which) {
-                                    dialog.cancel();// 返回點餐畫面
-                                }
-                            }).show();
-            break;
-        }
+        Intent i = new Intent();
+        Bundle b = new Bundle();
+
+        b.putString("meal1",meal[0]);
+        b.putString("meal2",meal[1]);
+        b.putString("meal3",meal[2]);
+        b.putString("meal4",meal[3]);
+        b.putString("meal5",meal[4]);
+        b.putInt("number1",e[0]);
+        b.putInt("number2",e[1]);
+        b.putInt("number3",e[2]);
+        b.putInt("number4",e[3]);
+        b.putInt("number5",e[4]);
+        b.putInt("price", (e[0]*50+e[1]*45+e[2]*50+e[3]*50+e[4]*55));
+        i.putExtras(b);
+        setResult(201, i);
+        finish();
     }
 
     @Override
@@ -85,34 +83,25 @@ public class muffinmenu extends AppCompatActivity {
         setContentView(R.layout.muffinmenu);
         findView();
 
-        TextView muf = (TextView) findViewById(R.id.muffintext1);                                  //北科美食通標題
-        muf.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf1 = (TextView) findViewById(R.id.muffintext2);                                  //北科美食通標題
-        muf1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf2 = (TextView) findViewById(R.id.taste1);                                  //北科美食通標題
-        muf2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf3 = (TextView) findViewById(R.id.taste2);                                  //北科美食通標題
-        muf3.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf4 = (TextView) findViewById(R.id.taste3);                                  //北科美食通標題
-        muf4.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf5 = (TextView) findViewById(R.id.taste4);                                  //北科美食通標題
-        muf5.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf6 = (TextView) findViewById(R.id.taste5);                                  //北科美食通標題
-        muf6.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf7 = (TextView) findViewById(R.id.taste6);                                  //北科美食通標題
-        muf7.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf8 = (TextView) findViewById(R.id.taste7);                                  //北科美食通標題
-        muf8.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
-        TextView muf9 = (TextView) findViewById(R.id.taste8);                                  //北科美食通標題
-        muf9.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        TextView ing = (TextView) findViewById(R.id.pastaingredienttext);                                  //北科美食通標題
+        ing.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        muffin_send = findViewById(R.id.muffin_send);
-        muffin_send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivityForResult(new Intent(muffinmenu.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        apimap.class), 1);
-            }
-        });
+        TextView ing1 = (TextView) findViewById(R.id.extranoodletext);                                  //北科美食通標題
+        ing1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing2 = (TextView) findViewById(R.id.pasta1);                                  //北科美食通標題
+        ing2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing3 = (TextView) findViewById(R.id.pasta2);                                  //北科美食通標題
+        ing3.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing4 = (TextView) findViewById(R.id.pasta3);                                  //北科美食通標題
+        ing4.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing5 = (TextView) findViewById(R.id.pasta4);                                  //北科美食通標題
+        ing5.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+
+        TextView ing6 = (TextView) findViewById(R.id.pasta5);                                  //北科美食通標題
+        ing6.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
     }
 }

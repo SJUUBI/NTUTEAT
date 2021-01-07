@@ -12,16 +12,14 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView"
-        android:layout_width="448dp"
-        android:layout_height="256dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="457dp"
+        android:layout_height="357dp"
+        android:layout_marginBottom="4dp"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sql"
-        app:layout_constraintVertical_bias="0.388"
         app:srcCompat="@drawable/giphy" />
 
     <TextView
@@ -48,19 +46,6 @@
         app:layout_constraintTop_toTopOf="@+id/btn_choice"
         app:layout_constraintVertical_bias="0.555" />
 -->
-
-    <Button
-        android:id="@+id/btn_sql"
-        android:layout_width="275dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/buttonstyle"
-        android:text="點餐紀錄"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/btn_choice"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_choice"
-        app:layout_constraintTop_toBottomOf="@+id/btn_res" />
 
     <Button
         android:id="@+id/btn_res"

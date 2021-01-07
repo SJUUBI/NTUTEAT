@@ -292,28 +292,16 @@
         app:layout_constraintTop_toBottomOf="@+id/pastamenuimg" />
 
     <Button
-        android:id="@+id/pasta_send"
-        android:layout_width="107dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimary"
-        android:text="送出"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pasta5" />
-
-    <Button
         android:id="@+id/btn_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/colorPrimary"
         android:onClick="Enter"
         android:text="確認"
-        app:layout_constraintBottom_toBottomOf="@+id/pasta_send"
-        app:layout_constraintStart_toEndOf="@+id/pasta_send"
-        app:layout_constraintTop_toTopOf="@+id/pasta_send" />
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pasta5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

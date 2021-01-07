@@ -3,6 +3,8 @@ package com.example.lab4;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -13,105 +15,93 @@ import android.widget.TextView;
 
 public class breakfastmenu extends AppCompatActivity {
 
-    private Button send_btn4;
-    private TextView breakfastmeal;
-    private RadioGroup rg1,rg2;
+    private
+    Button btn_up[] = new Button[5];
+    Button btn_down[] = new Button[5];
+    TextView num[] = new TextView[5];
+    int up[] = {R.id.btn_up1, R.id.btn_up2, R.id.btn_up3, R.id.btn_up4, R.id.btn_up5};
+    int down[] = {R.id.btn_down1, R.id.btn_down2, R.id.btn_down3, R.id.btn_down4, R.id.btn_down5};
+    int number[] = {R.id.num1, R.id.num2, R.id.num3, R.id.num4, R.id.num5};
+    int e[] = {0, 0, 0, 0, 0};
+    String[] meal=new String[]{"招牌套餐","法式套餐","幸福套餐","樂活套餐","美式套餐"};
+    String s = "";
 
-    private String ingredient = "野菇";
-    private String sauce = "茄汁";
-    private String extra = "5元";
+    public void UP(View v) {
+        for (int i = 0; i < btn_up.length; i++) {
+            if (v == btn_up[i]) {
+                e[i]++;//遞增，用陣列來存取每個餐點的數量
+                s = Integer.toString(e[i]);
+                num[i].setText(s);
+
+            }
+        }
+
+    }
+
+    public void Down(View v) {
+        for (int i = 0; i < btn_down.length; i++) {
+            if (v == btn_down[i]) {
+                if (e[i] > 0) {
+                    e[i]--;//遞減，用陣列來存取每個餐點的數量
+                    s = Integer.toString(e[i]);
+                    num[i].setText(s);
+                }
+            }
+        }
+    }
+
+    public void findView() {
+        for (int i = 0; i < btn_up.length; i++) {
+            btn_up[i] = (Button) this.findViewById(up[i]);
+            btn_down[i] = (Button) this.findViewById(down[i]);
+            num[i] = (TextView) this.findViewById(number[i]);
+        }
+    }
+    public void Enter(View v) {
+        Intent i = new Intent();
+        Bundle b = new Bundle();
+
+        b.putString("meal1",meal[0]);
+        b.putString("meal2",meal[1]);
+        b.putString("meal3",meal[2]);
+        b.putString("meal4",meal[3]);
+        b.putString("meal5",meal[4]);
+        b.putInt("number1",e[0]);
+        b.putInt("number2",e[1]);
+        b.putInt("number3",e[2]);
+        b.putInt("number4",e[3]);
+        b.putInt("number5",e[4]);
+        b.putInt("price", (e[0]*75+e[1]*80+e[2]*65+e[3]*95+e[4]*95));
+        i.putExtras(b);
+        setResult(501, i);
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.breakfastmenu);
+        findView();
 
-        TextView ing = (TextView) findViewById(R.id.breakfasttext1);                                  //北科美食通標題
+        TextView ing = (TextView) findViewById(R.id.pastaingredienttext);                                  //北科美食通標題
         ing.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        TextView ing1 = (TextView) findViewById(R.id.breakfasttext2);                                  //北科美食通標題
+        TextView ing1 = (TextView) findViewById(R.id.extranoodletext);                                  //北科美食通標題
         ing1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
+        TextView ing2 = (TextView) findViewById(R.id.pasta1);                                  //北科美食通標題
+        ing2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        breakfastmeal = findViewById(R.id.breakfast_meal);
-        send_btn4 = findViewById(R.id.breakfast_send);
+        TextView ing3 = (TextView) findViewById(R.id.pasta2);                                  //北科美食通標題
+        ing3.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        send_btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent();
-                Bundle b = new Bundle();
-                b.putString("sugar",ingredient);
-                b.putString("drink",sauce);
-                b.putString("ice",extra);
-                i.putExtras(b);
-                setResult(111,i);
-                finish();
-            }
-        });
+        TextView ing4 = (TextView) findViewById(R.id.pasta3);                                  //北科美食通標題
+        ing4.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        rg1 = findViewById(R.id.breakfastingredient);
-        rg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.breakfastselectbtn:
-                        ingredient= "野菇";
-                        break;
-                    case R.id.breakfastselectbtn1:
-                        ingredient = "嫩雞";
-                        break;
-                    case R.id.breakfastselectbtn2:
-                        ingredient = "德式香腸";
-                        break;
-                    case R.id.breakfastselectbtn3:
-                        ingredient = "培根";
-                        break;
-                }
-            }
-        });
+        TextView ing5 = (TextView) findViewById(R.id.pasta4);                                  //北科美食通標題
+        ing5.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
 
-        rg2 = findViewById(R.id.breakfastmain);
-        rg2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i){
-                    case R.id.breakfastmain1:
-                        sauce = "微冰";
-                        break;
-                    case R.id.breakfastmain2:
-                        sauce = "少冰";
-                        break;
-                    case R.id.breakfastmain3:
-                        sauce = "正常冰";
-                        break;
-                    case R.id.breakfastmain4:
-                        sauce = "正常冰";
-                        break;
-                }
-            }
-        });
-
+        TextView ing6 = (TextView) findViewById(R.id.pasta5);                                  //北科美食通標題
+        ing6.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(data == null) return;
-
-        if(requestCode == 1){
-            if(resultCode == 111){
-
-                Bundle b = data.getExtras();
-                String str1 = b.getString("drink");
-                String str2 = b.getString("sugar");
-                String str3 = b.getString("ice");
-                breakfastmeal.setText(String.format("飲料: %s\n\n甜度: %s\n\n冰塊: %s\n\n",
-                        str1,
-                        str2,
-                        str3));
-            }
-        }
-    }
-
 }

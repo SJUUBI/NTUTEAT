@@ -65,7 +65,7 @@ public class menuJAVA extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivityForResult(new Intent(menuJAVA.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        pastamenu.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
+                        mealtest.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
 
 
             }
@@ -76,7 +76,7 @@ public class menuJAVA extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivityForResult(new Intent(menuJAVA.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        buffetmenu.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
+                        mealtest3.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
 
 
             }
@@ -87,7 +87,7 @@ public class menuJAVA extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivityForResult(new Intent(menuJAVA.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        muffinmenu.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
+                        mealtest1.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
 
 
             }
@@ -98,7 +98,7 @@ public class menuJAVA extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivityForResult(new Intent(menuJAVA.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        breakfastmenu.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
+                        mealtest4.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
 
 
             }
@@ -109,7 +109,7 @@ public class menuJAVA extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivityForResult(new Intent(menuJAVA.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        comebuymenu.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
+                        mealtest2.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
 
 
             }
@@ -120,7 +120,7 @@ public class menuJAVA extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivityForResult(new Intent(menuJAVA.this,                  //將頁面轉到餐廳優惠快報圖片頁面(slideimg)
-                        louisamenu.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
+                        mealtest5.class), 1);                                            //將頁面轉到餐廳圖片頁面(slideimg)
 
 
             }
