@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#708069</color>     <!--軟體名稱bar顏色-->
+    <color name="colorPrimaryDark">#808069</color> <!--通知欄顏色-->
+    <color name="background">#FFDE38</color>
+    <color name="colorAccent">#FAF0E6</color>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="423dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text=" On Sale"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_weight="1"
+        android:background="@color/colorAccent" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/CirclePageindicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#808069"
+        android:padding="5dip"
+        app:fillColor="#FFDE38"
+        app:pageColor="#FAF0E6"
+        app:radius="7dp"
+        app:strokeColor="#808069"
+        app:strokeWidth="1dp" />
+
+<!--    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menuiconpng" /> -->
+
+
+</LinearLayout>

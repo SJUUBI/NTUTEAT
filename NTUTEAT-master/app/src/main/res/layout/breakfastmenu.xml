@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".breakfastmenu">
+
+    <ImageButton
+        android:id="@+id/breakfastmenuimg"
+        android:layout_width="414dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/colorAccent"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/c4" />
+
+    <TextView
+        android:id="@+id/breakfasttext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="32dp"
+        android:text="飲品"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/breakfasttext1"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastmenuimg" />
+
+    <RadioGroup
+        android:id="@+id/breakfastingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/breakfasttext2"
+        app:layout_constraintStart_toStartOf="@+id/breakfasttext2"
+        app:layout_constraintTop_toBottomOf="@+id/breakfasttext2">
+
+        <RadioButton
+            android:id="@+id/breakfastselectbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="奶茶"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="180dp" />
+
+        <RadioButton
+            android:id="@+id/breakfastselectbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="紅茶"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <RadioButton
+            android:id="@+id/breakfastselectbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="咖啡"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="116dp" />
+
+        <RadioButton
+            android:id="@+id/breakfastselectbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="豆漿"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="84dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/breakfasttext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="32dp"
+        android:text="套餐"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastmenuimg" />
+
+    <RadioGroup
+        android:id="@+id/breakfastmain"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/breakfasttext1"
+        app:layout_constraintStart_toStartOf="@+id/breakfasttext1"
+        app:layout_constraintTop_toBottomOf="@+id/breakfasttext1">
+
+        <RadioButton
+            android:id="@+id/breakfastmain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="招牌套餐" />
+
+        <RadioButton
+            android:id="@+id/breakfastmain2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="法式特餐" />
+
+        <RadioButton
+            android:id="@+id/breakfastmain3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="幸福特餐" />
+
+        <RadioButton
+            android:id="@+id/breakfastmain4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="樂活特餐" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/breakfast_send"
+        android:layout_width="114dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/colorPrimary"
+        android:text="送出"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/breakfastensure"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="@+id/breakfastensure"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastensure" />
+
+    <TextView
+        android:id="@+id/breakfastensure"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="24dp"
+        android:text="確認餐點"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastingredient" />
+
+    <TextView
+        android:id="@+id/breakfast_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="配料:無               醬料: 無              加麵: 無"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastensure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

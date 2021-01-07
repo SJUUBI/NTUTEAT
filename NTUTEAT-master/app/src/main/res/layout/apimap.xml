@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".apimap">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loading"
+        android:layout_width="272dp"
+        android:layout_height="187dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="56dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/giphy3" />
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/deliveryman"
+        android:layout_width="279dp"
+        android:layout_height="191dp"
+        android:layout_marginEnd="425dp"
+        android:layout_marginRight="425dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/giphy2" />
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="331dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:text="餐點正在為您配送中"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </fragment>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
