@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".muffinmenu">
+
+  <ImageButton
+      android:id="@+id/muffinmenuimg"
+      android:layout_width="405dp"
+      android:layout_height="290dp"
+      android:layout_marginStart="25dp"
+      android:layout_marginLeft="25dp"
+      android:layout_marginEnd="25dp"
+      android:layout_marginRight="25dp"
+      android:background="@color/colorAccent"
+      android:scaleType="centerInside"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/c3" />
+
+  <TextView
+      android:id="@+id/muffintext2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="104dp"
+      android:layout_marginLeft="104dp"
+      android:layout_marginTop="32dp"
+      android:text="口味"
+      android:textColor="@android:color/black"
+      android:textSize="22sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/muffinmenuimg" />
+
+  <RadioGroup
+      android:id="@+id/muffiningredient"
+      android:layout_width="wrap_content"
+      android:layout_height="128dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintEnd_toEndOf="@+id/muffintext2"
+      app:layout_constraintStart_toStartOf="@+id/muffintext2"
+      app:layout_constraintTop_toBottomOf="@+id/muffintext2">
+
+    <RadioButton
+        android:id="@+id/muffinselectbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="true"
+        android:text="藍莓"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <RadioButton
+        android:id="@+id/muffinselectbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="false"
+        android:text="草莓"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <RadioButton
+        android:id="@+id/muffinselectbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="false"
+        android:text="香草"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <RadioButton
+        android:id="@+id/muffinselectbtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="false"
+        android:text="巧克力"
+        tools:layout_editor_absoluteX="180dp"
+        tools:layout_editor_absoluteY="84dp" />
+  </RadioGroup>
+
+  <TextView
+      android:id="@+id/muffintext1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="100dp"
+      android:layout_marginLeft="100dp"
+      android:text="飲料"
+      android:textColor="@android:color/black"
+      android:textSize="22sp"
+      app:layout_constraintStart_toEndOf="@+id/muffintext2"
+      app:layout_constraintTop_toTopOf="@+id/muffintext2" />
+
+  <RadioGroup
+      android:id="@+id/muffinmain"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      app:layout_constraintEnd_toEndOf="@+id/muffintext1"
+      app:layout_constraintStart_toStartOf="@+id/muffintext1"
+      app:layout_constraintTop_toBottomOf="@+id/muffintext1">
+
+    <RadioButton
+        android:id="@+id/muffinmain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="true"
+        android:text="鐵觀音" />
+
+    <RadioButton
+        android:id="@+id/muffinmain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="false"
+        android:text="伯爵奶茶" />
+
+    <RadioButton
+        android:id="@+id/muffinmain3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="false"
+        android:text="紅茶" />
+
+    <RadioButton
+        android:id="@+id/muffinmain4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="false"
+        android:text="水果茶" />
+
+
+  </RadioGroup>
+
+  <Button
+      android:id="@+id/muffin_send"
+      android:layout_width="114dp"
+      android:layout_height="54dp"
+      android:layout_marginTop="28dp"
+      android:background="@color/colorPrimary"
+      android:text="送出"
+      android:textColor="@color/colorAccent"
+      app:layout_constraintEnd_toEndOf="@+id/muffinensure"
+      app:layout_constraintStart_toStartOf="@+id/muffinensure"
+      app:layout_constraintTop_toBottomOf="@+id/muffin_meal" />
+
+  <TextView
+      android:id="@+id/muffinensure"
+      android:layout_width="wrap_content"
+      android:layout_height="29dp"
+      android:layout_marginTop="24dp"
+      android:text="確認餐點"
+      android:textColor="@android:color/black"
+      android:textSize="22sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.504"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/muffinmain" />
+
+  <TextView
+      android:id="@+id/muffin_meal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="配料:無               醬料: 無              加麵: 無"
+      android:textSize="22sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/muffinensure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

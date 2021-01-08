@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".louisamenu">
+
+    <ImageButton
+        android:id="@+id/louisamenuimg"
+        android:layout_width="416dp"
+        android:layout_height="298dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/colorAccent"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/c6" />
+
+    <TextView
+        android:id="@+id/louisatext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="44dp"
+        android:text="飲品"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/louisamenuimg" />
+
+    <RadioGroup
+        android:id="@+id/louisaingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/louisatext2"
+        app:layout_constraintStart_toStartOf="@+id/louisatext2"
+        app:layout_constraintTop_toBottomOf="@+id/louisatext2">
+
+        <RadioButton
+            android:id="@+id/louisaselectbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="小農拿鐵"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="180dp" />
+
+        <RadioButton
+            android:id="@+id/louisaselectbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="美式"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <RadioButton
+            android:id="@+id/louisaselectbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="曼特寧"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="116dp" />
+
+        <RadioButton
+            android:id="@+id/louisaselectbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="哥倫比亞"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="84dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/louisatext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:text="茶飲"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/louisatext2"
+        app:layout_constraintTop_toTopOf="@+id/louisatext2" />
+
+    <RadioGroup
+        android:id="@+id/louisamain"
+        android:layout_width="46dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/louisatext1"
+        app:layout_constraintStart_toStartOf="@+id/louisatext1"
+        app:layout_constraintTop_toBottomOf="@+id/louisatext1">
+
+        <RadioButton
+            android:id="@+id/louisamain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="冰" />
+
+        <RadioButton
+            android:id="@+id/louisamain2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="熱" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/louisa_send"
+        android:layout_width="114dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/colorPrimary"
+        android:text="送出"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/louisaensure"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/louisaensure"
+        app:layout_constraintTop_toBottomOf="@+id/louisaensure" />
+
+    <TextView
+        android:id="@+id/louisaensure"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="32dp"
+        android:text="確認餐點"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/louisamain" />
+
+    <TextView
+        android:id="@+id/louisa_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="配料:無               醬料: 無              加麵: 無"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/louisaensure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
