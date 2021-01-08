@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".comebuymenu">
+
+    <ImageButton
+        android:id="@+id/comebuymenuimg"
+        android:layout_width="442dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@color/colorAccent"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/c5" />
+
+    <TextView
+        android:id="@+id/comebuytext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="44dp"
+        android:text="甜度"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/comebuytext1"
+        app:layout_constraintTop_toBottomOf="@+id/comebuymenuimg" />
+
+    <RadioGroup
+        android:id="@+id/comebuyingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/comebuytext2"
+        app:layout_constraintStart_toStartOf="@+id/comebuytext2"
+        app:layout_constraintTop_toBottomOf="@+id/comebuytext2">
+
+        <RadioButton
+            android:id="@+id/comebuyselectbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="全糖"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="180dp" />
+
+        <RadioButton
+            android:id="@+id/comebuyselectbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="半糖"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <RadioButton
+            android:id="@+id/comebuyselectbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="微糖"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="116dp" />
+
+        <RadioButton
+            android:id="@+id/comebuyselectbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="無糖"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="84dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/comebuytext1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="44dp"
+        android:text="茶飲"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comebuymenuimg" />
+
+    <RadioGroup
+        android:id="@+id/comebuymain"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/comebuytext1"
+        app:layout_constraintStart_toStartOf="@+id/comebuytext1"
+        app:layout_constraintTop_toBottomOf="@+id/comebuytext1">
+
+        <RadioButton
+            android:id="@+id/comebuymain1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="true"
+            android:text="海神" />
+
+        <RadioButton
+            android:id="@+id/comebuymain2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="碧螺春" />
+
+        <RadioButton
+            android:id="@+id/comebuymain3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="四季春" />
+
+        <RadioButton
+            android:id="@+id/comebuymain4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            android:text="玩火" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/comebuy_send"
+        android:layout_width="114dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorPrimary"
+        android:text="送出"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/comebuyensure"
+        app:layout_constraintStart_toStartOf="@+id/comebuyensure"
+        app:layout_constraintTop_toBottomOf="@+id/comebuyensure" />
+
+    <TextView
+        android:id="@+id/comebuyensure"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="32dp"
+        android:text="確認餐點"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comebuyingredient" />
+
+    <TextView
+        android:id="@+id/comebuy_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="配料:無               醬料: 無              加麵: 無"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comebuyensure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
