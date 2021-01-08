@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
@@ -51,16 +52,27 @@ public class apimap extends AppCompatActivity implements OnMapReadyCallback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.apimap);
+        final TextView delivery1= (TextView) findViewById(R.id.textView4);
+        final TextView delivery2 = (TextView) findViewById(R.id.textView5);
+        showText1();
 
-        TextView delivery = (TextView) findViewById(R.id.textView3);                                  //北科美食通標題
-        delivery.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
-
-        TextView delivery1 = (TextView) findViewById(R.id.textView4);                                  //北科美食通標題
-        delivery1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
-
-        TextView delivery2 = (TextView) findViewById(R.id.textView5);                                  //北科美食通標題
-        delivery2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
-
+        Handler handler = new Handler();
+        Handler handler1 = new Handler();
+        delivery1.setVisibility(View.GONE);
+        delivery2.setVisibility(View.GONE);
+        handler.postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                delivery1.setVisibility(View.VISIBLE);
+                showText2();
+                showgif();
+            }}, 3000);
+        handler1.postDelayed(new Runnable(){
+            @Override
+            public void run() {
+                delivery2.setVisibility(View.VISIBLE);
+                showText3();
+            }}, 6000);
         //final TextView delivery13 = (TextView) findViewById(R.id.textView13);                                  //北科美食通標題
         //delivery13.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
         //------------------------------------------------------------------------------------------
@@ -72,40 +84,11 @@ public class apimap extends AppCompatActivity implements OnMapReadyCallback {
             e.printStackTrace();
         }
         //------------------------------------------------------------------------------------------
-        AnimationSet animationSet11 = new AnimationSet(true);
-        TranslateAnimation translateAnimation11=new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF,-2f,
-                Animation.RELATIVE_TO_SELF,0f,
-                Animation.RELATIVE_TO_SELF,0f,
-                Animation.RELATIVE_TO_SELF,0f);
 
-
-        translateAnimation11.setDuration(5000);                                                      //動畫持續時間
-        animationSet11.addAnimation(translateAnimation11);
-        delivery.startAnimation(animationSet11);
         //-----------------------------------------------------------------------------------------
-        AnimationSet animationSet55 = new AnimationSet(true);
-        TranslateAnimation translateAnimation55=new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF,-2f,
-                Animation.RELATIVE_TO_SELF,0f,
-                Animation.RELATIVE_TO_SELF,0f,
-                Animation.RELATIVE_TO_SELF,0f);
 
-        translateAnimation55.setDuration(5000);                                                      //動畫持續時間
-        animationSet55.addAnimation(translateAnimation55);
-        delivery1.startAnimation(animationSet55);
         //------------------------------------------------------------------------------------------
-        AnimationSet animationSet66 = new AnimationSet(true);
-        TranslateAnimation translateAnimation66=new TranslateAnimation(
-                Animation.RELATIVE_TO_SELF,-2f,
-                Animation.RELATIVE_TO_SELF,0f,
-                Animation.RELATIVE_TO_SELF,0f,
-                Animation.RELATIVE_TO_SELF,0f);
 
-
-        translateAnimation66.setDuration(5000);                                                      //動畫持續時間
-        animationSet66.addAnimation(translateAnimation66);
-        delivery2.startAnimation(animationSet66);
         //------------------------------------------------------------------------------------------
         AnimationSet animationSet6 = new AnimationSet(true);
         TranslateAnimation translateAnimation6 = new TranslateAnimation(
@@ -167,5 +150,70 @@ public class apimap extends AppCompatActivity implements OnMapReadyCallback {
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(
                 new LatLng(25.043306932446388, 121.53383854772765),18));
 
+    }
+
+    public void showText1(){
+        TextView delivery = (TextView) findViewById(R.id.textView3);                                  //北科美食通標題
+        delivery.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));
+        AnimationSet animationSet11 = new AnimationSet(true);
+        TranslateAnimation translateAnimation11=new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF,-3f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f);
+
+
+        translateAnimation11.setDuration(5000);                                                      //動畫持續時間
+        animationSet11.addAnimation(translateAnimation11);
+        delivery.startAnimation(animationSet11);
+    }
+    public void showText2(){
+        TextView delivery1 = (TextView) findViewById(R.id.textView4);                                  //北科美食通標題
+        delivery1.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
+        AnimationSet animationSet55 = new AnimationSet(true);
+        TranslateAnimation translateAnimation55=new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF,-3f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f);
+
+        translateAnimation55.setDuration(5000);                                                      //動畫持續時間
+        animationSet55.addAnimation(translateAnimation55);
+        delivery1.startAnimation(animationSet55);
+    }
+    public void showText3(){
+        TextView delivery2 = (TextView) findViewById(R.id.textView5);                                  //北科美食通標題
+        delivery2.setTypeface(Typeface.createFromAsset(getAssets(), "HanyiSentyTang.ttf"));  //北科美食通標題字型
+        AnimationSet animationSet66 = new AnimationSet(true);
+        TranslateAnimation translateAnimation66=new TranslateAnimation(
+                Animation.RELATIVE_TO_SELF,-3f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f,
+                Animation.RELATIVE_TO_SELF,0f);
+
+
+        translateAnimation66.setDuration(5000);                                                      //動畫持續時間
+        animationSet66.addAnimation(translateAnimation66);
+        delivery2.startAnimation(animationSet66);
+    }
+    public void showgif(){
+        GifImageView ImageView2 = findViewById(R.id.deliveryman2);
+        try{
+            GifDrawable gifDrawable2 = new GifDrawable(getResources(), R.drawable.giphy22);
+            ImageView2.setImageDrawable(gifDrawable2);
+
+            AnimationSet animationSet666 = new AnimationSet(true);
+            TranslateAnimation translateAnimation666 = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF,-8f,
+                    Animation.RELATIVE_TO_SELF,0f,
+                    Animation.RELATIVE_TO_SELF,0f,
+                    Animation.RELATIVE_TO_SELF,0f);
+
+            translateAnimation666.setDuration(5000);                                                      //動畫持續時間
+            animationSet666.addAnimation(translateAnimation666);
+            ImageView2.startAnimation(animationSet666);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

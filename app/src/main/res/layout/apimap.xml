@@ -18,6 +18,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/giphy2" />
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/deliveryman2"
+        android:layout_width="279dp"
+        android:layout_height="191dp"
+        android:layout_marginStart="425dp"
+        android:layout_marginLeft="425dp"
+        android:rotationY="-180"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/giphy22" />
 
     <!--<TextView
         android:id="@+id/textView13"
@@ -37,8 +48,6 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="420dp"
-        android:layout_marginLeft="420dp"
         android:layout_marginTop="24dp"
         android:text="餐廳正在準備您的餐點"
         android:textColor="@color/colorAccent"
@@ -50,8 +59,6 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="420dp"
-        android:layout_marginLeft="420dp"
         android:layout_marginTop="40dp"
         android:text="餐點正在為您配送"
         android:textColor="@color/colorAccent"
@@ -63,8 +70,6 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="420dp"
-        android:layout_marginLeft="420dp"
         android:layout_marginTop="40dp"
         android:text="餐點以配達您的位置"
         android:textColor="@color/colorAccent"
